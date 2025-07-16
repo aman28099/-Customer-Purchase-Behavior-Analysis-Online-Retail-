@@ -74,3 +74,9 @@ summary = {
 }
 summary_df = pd.DataFrame(summary.items(), columns=["Metric", "Value"])
 summary_df.to_csv("project_summary.csv", index=False)
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+sns.barplot(x=top_products.values, y=top_products.index)
+plt.title('Top 10 Products by Revenue')
+plt.show()
